@@ -1,6 +1,8 @@
 <template>
   <Navbar />
-  <router-view></router-view>
+  <div class="mt-5">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

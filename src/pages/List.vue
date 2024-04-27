@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <div :key="i" v-for="(item, i) in list">
+    <div class="item" :key="i" v-for="(item, i) in list" @click="$router.push(`/writing/${item.number}`)">
       <h5>{{ item.title }}</h5>
       <p class="date">{{ item.date }}</p>
       <p>{{ item.content }}</p>
@@ -37,5 +37,9 @@ export default {
 
 .list hr {
   border-color: #e1e1e1;
+}
+
+.item {
+  cursor: pointer;
 }
 </style>
